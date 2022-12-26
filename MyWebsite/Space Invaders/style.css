@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+#score {
+    position: absolute; 
+    z-index: 10; 
+    color: white; 
+    left: 10px; 
+    top: 10px; 
+    margin: 0;
+    font-family:  'Press Start 2P', cursive;
+    font-size: 14px;
+}
+#game {
+    position:relative;
+    display: inline-block;
+    margin: 10px;
+    border: 5px inset gray;
+    height: 586px;
+}
+#smaller_red_container_div{
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    padding: 20px;
+    margin: 52% 5% 5% -1%;
+}
+#player {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+}
+#full_player_health {
+    background-color: rgb(231, 0, 0);;
+    height: 10px;
+    width: 100%;
+}
+#current_player_health {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+.header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

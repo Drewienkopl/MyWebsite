@@ -1,0 +1,38 @@
+#game {
+    width: 1024px;
+    height: 576px;
+    background-image: url(./img/Background1.png);
+    float: left;
+    margin: 10px;
+    border: 5px inset gray;
+}
+#character {
+    width: 100px;
+    height: 103px;
+    position: relative;
+    top: 388px;
+}
+.animate {
+    animation:  jump 500ms;
+}
+@keyframes jump {
+    0%{top: 200px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 200px;}
+}
+#block {
+    width: 82px;
+    height: 175px;
+    position: relative;
+    top: 240px;
+    left: 1024px;
+    animation: block 1s infinite linear;
+}
+@keyframes block {
+    0%{left: 1024px;}
+    100%{left:-40px;}
+}
+ul {
+    padding-left: 40px;
+}

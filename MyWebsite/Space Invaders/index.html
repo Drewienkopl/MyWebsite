@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Menu/style.css">
+
+    <link rel="icon" href="./img/logo-spaceInvaders.png" sizes="100x100" type="image/png">
+
+</head>
+
+<body>
+    <div class="glowny">
+        <div class="header">
+            <h1>MyWebsite</h1>
+        </div>
+
+        <div class="nav">
+            <ol>
+                <li><a href="../Menu/mainIndex.html">Home</a></li>
+                <li><a href="#">Games</a>
+                    <ul>
+                        <li><a href="../Fighting-Game/index.html">Fighting Game</a></li>
+                        <li><a href="../Dinosaur-Game/index.html">Dinosaur Game</a></li>
+                        <li><a href="./index.html">Space Invaders</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Other</a>
+                    <ul>
+                      <li><a href="../Calculator/index.html">Calculator</a></li>
+                    </ul>
+                  </li>
+            </ol>
+        </div>
+
+<div id="game">
+<p id="score">
+    <span>Score:</span> <span id="scoreEl">0</span>
+
+        <div id="smaller_red_container_div">
+            <div id="player">
+                <div id="full_player_health"></div>
+                <div id="current_player_health"></div>
+             </div>
+            <div id="enemy">
+               <div id="full_enemy_health"></div>
+               <div id="current_enemy_health"></div>
+            </div>
+        </div>
+
+</p>
+<canvas></canvas>
+</div>
+
+<div class="instrukcja" style="padding: 20px 30px 20px 40px;">
+    <ul>
+      Player
+      <li>Moves - awsd</li>
+      <li>Attack - space</li>
+    </ul>
+  </div>
+
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" 
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./js/classes.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="../Menu/script.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+        var NavY = $('.nav').offset().top;
+         
+        var stickyNav = function(){
+        var ScrollY = $(window).scrollTop();
+              
+        if (ScrollY > NavY) { 
+            $('.nav').addClass('sticky');
+        } else {
+            $('.nav').removeClass('sticky'); 
+        }
+        };
+         
+        stickyNav();
+         
+        $(window).scroll(function() {
+            stickyNav();
+        });
+        });
+        
+    </script>
+</body>
+</html>

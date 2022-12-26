@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur-Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Menu/style.css">
+    <link rel="icon" href="./img/logo-Dino.png" sizes="100x100" type="image/png">
+</head>
+<body>
+    <div class="glowny">
+        <div class="header">
+            <h1>MyWebsite</h1>
+        </div>
+
+        <div class="nav">
+            <ol>
+                <li><a href="../Menu/mainIndex.html">Home</a></li>
+                <li><a href="#">Games</a>
+                    <ul>
+                        <li><a href="../Fighting-Game/index.html">Fighting Game</a></li>
+                        <li><a href="index.html">Dinosaur Game</a></li>
+                        <li><a href="../Space Invaders/index.html">Space Invaders</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Other</a>
+                    <ul>
+                      <li><a href="../Calculator/index.html">Calculator</a></li>
+                    </ul>
+                  </li>
+            </ol>
+        </div>
+
+        <div id="game"> 
+            <div id="character"><img src="./img/Dinosaur1.png" alt="" srcset=""></div>
+            <div id="block"><img src="./img/kaktus.png" alt="" srcset=""></div>
+        </div>
+
+        <div class="instrukcja">
+            <ul>
+              Dino
+              <li>Jump - left click mouse</li>
+            </ul>
+          </div>
+
+
+    <script src="script.js"></script>
+
+    <script src="../Menu/script.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+        var NavY = $('.nav').offset().top;
+         
+        var stickyNav = function(){
+        var ScrollY = $(window).scrollTop();
+              
+        if (ScrollY > NavY) { 
+            $('.nav').addClass('sticky');
+        } else {
+            $('.nav').removeClass('sticky'); 
+        }
+        };
+         
+        stickyNav();
+         
+        $(window).scroll(function() {
+            stickyNav();
+        });
+        });
+        
+    </script>
+</body>
+</html>

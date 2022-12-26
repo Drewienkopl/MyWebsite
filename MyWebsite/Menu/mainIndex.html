@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../Menu/img/favicon.ico">
+  </head>
+
+  <body>
+    <div class="glowny">
+      <div class="header">
+        <h1>MyWebsite</h1>
+      </div>
+
+      <div class="nav">
+        <ol>
+          <li><a href="mainIndex.html">Home</a></li>
+          <li>
+            <a href="#">Games</a>
+            <ul>
+              <li><a href="../Fighting-Game/index.html">Fighting Game</a></li>
+              <li><a href="../Dinosaur-Game/index.html">Dinosaur Game</a></li>
+              <li><a href="../Space Invaders/index.html">Space Invaders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Other</a>
+            <ul>
+              <li><a href="../Calculator/index.html">Calculator</a></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div id="before">
+        <h2 class="nagl">Information</h2>
+        <p>
+          To jest moja strona internetowa na którą wrzucam Cwiczenia z programowania, które robie w wolnym czasie.<br/>W tym momencie sa tu jedynie gry takie jak te ponizej:
+        </p>
+      </div>
+
+      <div id="game1" class="games">
+        <a href="../Fighting-Game/index.html"><img src="./img/gra1.PNG" alt="game1" srcset=""  class="gamesImg"/></a>
+        <h4 class="nagl">
+          Fighting Game based on
+          <a href="https://www.youtube.com/watch?v=vyqbNFMDRGQ">This YouTube Video.</a>
+        </h4>
+        <ul>
+          Things that I added:
+          <li>Character can only jump, if his velocity.y = 0,</li>
+          <li>Character can't get out of the game screen area,</li>
+          <li>Winner screen,</li>
+          <li>Added Icon,</li>
+          <li>Character flashes red when attacked,</li>
+        </ul>
+      </div>
+
+      <div id="game2" class="games">
+        <a href="../Dinosaur-Game/index.html"><img src="./img/gra2.PNG" alt="game2" srcset="" class="gamesImg"/></a>
+        <h4 class="nagl">
+          Dinosaur Game based on
+          <a href="https://www.youtube.com/watch?v=bG2BmmYr9NQ">This YouTube Video.</a>
+        </h4>
+        <br />
+        <ul>
+          Things that I added:
+          <li>Made it bigger,</li>
+          <li>Added images: background, dino, kaktus,</li>
+          <li>Added Icon,</li>
+        </ul>
+      </div>
+
+      <div id="game3" class="games">
+        <a href="../Space Invaders/index.html"><img src="./img/gra3.PNG" alt="game3" srcset=""  class="gamesImg"/></a>
+        <h4 class="nagl">
+          Space Invaders based on
+          <a href="https://www.youtube.com/watch?v=MCVU0w73uKI">This YouTube Video.</a>
+        </h4>
+        <br />
+        <ul>
+          Things that I added:
+          <li>Added player movement on y axis,</li>
+          <li>Fixed projectiles hitting player from his front, even if they aren't touching him,</li>
+          <li>Fixed if invader gets out of frame and starts shooting, all projectiles dissapear,</li>
+          <li>Added different starting opacity for stars and object hit,</li>
+          <li>Added Icon,</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var NavY = $(".nav").offset().top;
+
+        var stickyNav = function () {
+          var ScrollY = $(window).scrollTop();
+
+          if (ScrollY > NavY) {
+            $(".nav").addClass("sticky");
+          } else {
+            $(".nav").removeClass("sticky");
+          }
+        };
+
+        stickyNav();
+
+        $(window).scroll(function () {
+          stickyNav();
+        });
+      });
+    </script>
+  </body>
+</html>

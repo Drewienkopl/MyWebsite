@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+#red_container_div {
+    position: relative;
+    font-family:  'Press Start 2P', cursive;
+    float: left;
+    margin: 10px;
+    border: 5px inset gray;
+}
+#smaller_red_container_div{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+#timer {
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid white;
+    font-size: 20px;
+}
+#enemy {
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+}
+#full_enemy_health {
+    background-color: rgb(231, 0, 0);
+    height: 30px;
+}
+#current_enemy_health {
+    position: absolute;
+    background-color: rgb(20, 20, 182);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#player {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+}
+#full_player_health {
+    background-color: rgb(231, 0, 0);;
+    height: 30px;
+    width: 100%;
+}
+#current_player_health {
+    position: absolute;
+    background-color: rgb(114, 46, 0);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+#display_winner {
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    border: 4px solid white;
+    margin-left: 362px;
+    margin-right: 362px;
+    margin-top: 150px;
+}
